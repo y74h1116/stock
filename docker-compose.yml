@@ -1,0 +1,15 @@
+services:
+  node:
+    container_name: node
+    build: ./docker/node
+    tty: true
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - 8888:8888
+      - 8080:80
+
+
