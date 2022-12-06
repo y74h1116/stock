@@ -10,6 +10,5 @@ services:
       - ./:/home/node/app
     ports:
       - 8888:8888
-      - 8080:80
 
 

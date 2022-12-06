@@ -17,4 +17,3 @@ RUN npm -v
 RUN npx -v
 
 EXPOSE 3000
-EXPOSE 80

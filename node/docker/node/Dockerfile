@@ -17,4 +17,3 @@ RUN node -v
 RUN npm -v
 
 EXPOSE 8888
-EXPOSE 80
