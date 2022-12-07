@@ -10,6 +10,10 @@ class Square extends React.Component {
     //     };
     // }
 
+    // square コンポーネントは自分自身で state を管理せず
+    // Board から値を受け取って、
+    // クリックされた時はそのことを Board コンポーネントに伝えるだけ。
+    // React 用語で「制御されたコンポーネント(controlled component)」という。
     render() {
         return (
             <button

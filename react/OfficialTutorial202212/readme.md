@@ -29,4 +29,6 @@
     親コンポーネントは props を使うことで子に情報を返すことができます。
     こうすることで、子コンポーネントが兄弟同士、あるいは親との間で常に同期されるようになります。
     ```
+- 制御されたコンポーネント  
+    - 参照：https://ja.reactjs.org/docs/forms.html#controlled-components  
 
