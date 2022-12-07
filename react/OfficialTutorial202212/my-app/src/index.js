@@ -3,17 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 class Square extends React.Component {
-    constructor(props) {
-        super(props);   // 親クラスのコンストラクを呼び出す
-        this.state = {
-            value: null,
-        };
-    }
+    // constructor(props) {
+    //     super(props);   // 親クラスのコンストラクを呼び出す
+    //     this.state = {
+    //         value: null,
+    //     };
+    // }
+
     render() {
         return (
-        <button className="square" onClick={() => this.setState({value: 'X'})}>
-            {this.state.value}
-        </button>
+            <button
+                className="square"
+                onClick={() => this.props.onClick()}>
+                {this.props.value}
+            </button>
         );
     }
 }
@@ -22,12 +25,31 @@ class Board extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            square: Array(9).fill(null),
+            squares: Array(9).fill(null),
         };
     }
 
+    handleClick(i) {
+        const squares = this.state.squares.slice();
+        squares[i] = 'X';
+        this.setState({squares: squares});
+    }
+
     renderSquare(i) {
-        return <Square value={i} />;
+        // Board から Square には、props として、2つの値を渡す (value と onClick)
+        // onClick プロパティには Board クラスの関数 (handleClick) を渡す
+        //
+        // ※Squareは、カスタムコンポーネントなので
+        // プロパティ名の命名は自由 (onClick ではなくてもよい)
+        // だけど、一応、React の慣習では
+        // イベントを表す props には on[Event名] という名前、
+        // イベントハンドラとなるメソッドには handle[Event名]という名前をつけるのが一般的。 
+        return (
+            <Square
+                value={this.state.squares[i]}
+                onClick={() => this.handleClick(i)}
+            />
+        );
     }
 
     render() {
