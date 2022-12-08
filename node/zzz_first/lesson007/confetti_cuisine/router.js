@@ -11,7 +11,7 @@ const routes = {
 // リクエストを処理する handle 関数
 exports.handle = (req, res) => {
     try {
-        routes[req.method][req.utl](req.res);
+        routes[req.method][req.url](req, res);
     } catch (e) {
         res.writeHead(httpStatus.OK, contentTypes.html);
         utils.getFile("views/error.html", res);
