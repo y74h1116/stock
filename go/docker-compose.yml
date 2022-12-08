@@ -1,0 +1,12 @@
+services:
+  go:
+    container_name: go
+    build: ./docker/go
+    tty: true
+    working_dir: /home/go
+    volumes:
+      - ./:/home/go
+    ports:
+      - 4000:4000
+
+
