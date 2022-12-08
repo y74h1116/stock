@@ -2,27 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-class Square extends React.Component {
-    // constructor(props) {
-    //     super(props);   // 親クラスのコンストラクを呼び出す
-    //     this.state = {
-    //         value: null,
-    //     };
-    // }
-
-    // square コンポーネントは自分自身で state を管理せず
-    // Board から値を受け取って、
-    // クリックされた時はそのことを Board コンポーネントに伝えるだけ。
-    // React 用語で「制御されたコンポーネント(controlled component)」という。
-    render() {
-        return (
-            <button
-                className="square"
-                onClick={() => this.props.onClick()}>
-                {this.props.value}
-            </button>
-        );
-    }
+// square コンポーネントは自分自身で state を管理せず
+// Board から値を受け取って、
+// クリックされた時はそのことを Board コンポーネントに伝えるだけ。
+// React 用語で「制御されたコンポーネント(controlled component)」という。
+// 
+// Square は、自分の state を持たないので
+// クラスコンポーネントから
+// 関数コンポーネントに書き換えた
+//
+// ※this.props は、props に書き換え
+// this がない方が実装しやすいかも
+// 
+// ※ただし、React 16.8 からはステートフル関数コンポーネントが書けるようになったらしい
+function Square(props) {
+    return (
+        <button className="square" onClick={props.onClick}>
+            {props.value}
+        </button>
+    );
 }
 
 class Board extends React.Component {

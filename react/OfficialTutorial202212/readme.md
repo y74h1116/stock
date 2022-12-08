@@ -31,4 +31,6 @@
     ```
 - 制御されたコンポーネント  
     - 参照：https://ja.reactjs.org/docs/forms.html#controlled-components  
+- 関数コンポーネントとクラスコンポーネント  
+    - 参照：https://ja.reactjs.org/docs/components-and-props.html
 
