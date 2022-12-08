@@ -2,7 +2,7 @@
 const fs = require("fs");
 const { METHOD_FAILURE } = require("http-status-codes");
 const httpStatus = require("http-status-codes");
-const contentTypes = require("./contentType");
+const contentTypes = require("./contentTypes");
 
 // ファイルを読み込んでレスポンスを返す getFile 関数をエクスポート
 module.exports = {
