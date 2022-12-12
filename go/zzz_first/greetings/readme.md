@@ -1,0 +1,1 @@
+- `Tutorial: Create a Go module`の写経  
