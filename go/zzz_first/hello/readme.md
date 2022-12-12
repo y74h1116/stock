@@ -1,4 +1,4 @@
-- `Tutorial: Create a Go module`の写経  
+- `Tutorial: Get started with Go`の写経  
 - 初期化 (go mode init hogehoge)  
     - 参照：https://go.dev/ref/mod#go-mod-init  
         - The go mod init command initializes and writes a new go.mod file in the current directory, in effect creating a new module rooted at the current directory. The go.mod file must not already exist.  
