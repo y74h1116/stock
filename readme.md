@@ -1,5 +1,5 @@
 # stock
 ## ディレクトリ概要
-- go：Go 言語 調査用
-- node：Node.js 調査用  
-- react：React 調査用  
+- `go ディレクトリ`：Go 言語 調査用
+- `node ディレクトリ`：Node.js 調査用  
+- `react ディレクトリ`：React 調査用  
