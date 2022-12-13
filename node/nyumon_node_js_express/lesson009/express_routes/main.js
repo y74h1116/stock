@@ -3,6 +3,13 @@ const express = require("express");
 
 const app = express();
 
+// ミドルウェア関数を定義
+app.use((req, res, next) => {
+    // リクエストのパスをログに出す
+    console.log(`request made to: ${req.url}`);
+    next(); // next関数を呼び出さないとハングする
+});
+
 app.get("/items/:vegetable", (req, res) => {
     console.log(req.params);
     console.log(req.body);  // GET メソッドでも、body は何か入ってくるのかな？
