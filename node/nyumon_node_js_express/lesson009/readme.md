@@ -12,3 +12,12 @@
     req.params.vegetable に「aaa」が入り、
     req.query に「bbb」が入ってた。
     ```
+- ミドルウェア関数  
+    ```
+    // リスト 9-4
+    app.use((req, res, next) => {
+        // リクエストのパスをログに出す
+        console.log(`request made to: ${req.url}`);
+        next(); // next関数を呼び出さないとリクエストがハングする
+    });
+    ```
