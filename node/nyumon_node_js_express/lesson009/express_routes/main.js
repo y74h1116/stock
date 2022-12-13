@@ -7,7 +7,7 @@ const app = express();
 app.use((req, res, next) => {
     // リクエストのパスをログに出す
     console.log(`request made to: ${req.url}`);
-    next(); // next関数を呼び出さないとハングする
+    next(); // next関数を呼び出さないとリクエストがハングする
 });
 
 app.get("/items/:vegetable", (req, res) => {
