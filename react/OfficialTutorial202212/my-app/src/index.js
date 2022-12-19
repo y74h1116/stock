@@ -113,6 +113,10 @@ class Game extends React.Component {
         });
     }
 
+    // ※render メソッドについてメモ
+    // 参照：https://ja.reactjs.org/docs/state-and-lifecycle.html
+    //   > setState() が呼び出されたおかげで、React は state が変わったということが分かるので、
+    //   > render() メソッドを再度呼び出して、画面上に何を表示すべきかを知ります。
     render() {
         const history = this.state.history;
         const current = history[history.length - 1];
