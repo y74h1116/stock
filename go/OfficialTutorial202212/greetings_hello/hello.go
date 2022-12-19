@@ -22,7 +22,7 @@ func main() {
 	// Request a greeeting message.
 	// このチュートリアルは、エラーハンドリングがテーマなので
 	// 意図的にエラーになるパラメータを渡す
-	message, err := greetings.Hello("")
+	message, err := greetings.Hello("Gladys")
 	// If an error as returned, print it to the console and
 	// exit the program.
 	if err != nil {
