@@ -126,8 +126,18 @@ class Game extends React.Component {
             const desc = move ?
                 'Go to move #' + move :
                 'Go to game start';
+            // ※チュートリアルのメモ
+            // key は、特別なプロパティで、React によって予約されている。
+            // 要素が作成される際、React は key プロパティを引き抜いて
+            // 返される 要素に直接その key を格納します。
+            // key は props の一部のようにも思えますが
+            // this.props.key で参照できません。
+            // React はどの子要素を更新すべきかを決定する際に、 key を自動的に使用します。
+            // コンポーネントが自身の key について確認する方法はありません。
+            // (したがって)
+            // 動的なリストを構築する場合は正しい key を割り当てることが強く推奨されます。
             return (
-                <li>
+                <li key={move}>
                     <button onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
             );
