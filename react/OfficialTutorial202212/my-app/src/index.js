@@ -114,6 +114,13 @@ class Game extends React.Component {
         });
     }
 
+    jumpTo() {
+        this.setState({
+            stepNumber: step,
+            xIsNext: (step % 2) === 0,
+        });
+    }
+
     // ※render メソッドについてメモ
     // 参照：https://ja.reactjs.org/docs/state-and-lifecycle.html
     //   > setState() が呼び出されたおかげで、React は state が変わったということが分かるので、
