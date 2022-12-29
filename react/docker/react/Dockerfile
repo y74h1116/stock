@@ -17,3 +17,5 @@ RUN npm -v
 RUN npx -v
 
 EXPOSE 3000
+# for React Router
+EXPOSE 5173
