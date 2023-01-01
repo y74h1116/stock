@@ -19,16 +19,16 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	// Request a greeeting message.
-	// このチュートリアルは、エラーハンドリングがテーマなので
-	// 意図的にエラーになるパラメータを渡す
-	message, err := greetings.Hello("Gladys")
-	// If an error as returned, print it to the console and
-	// exit the program.
+	// A slice of names.
+	names := []string{"Gladys", "Samantha", "Darrin"}
+
+	// Request greeting messages for the names.
+	messages, err := greetings.Hellos(names)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// Get a greeting message and print it.
-	fmt.Println(message)
+	// If no error was returned, print the returned map of
+	// messages to the console.
+	fmt.Println(messages)
 }
